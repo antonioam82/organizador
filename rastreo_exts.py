@@ -1,7 +1,7 @@
 import os
 from VALID import ns
 
-filetype = raw_input("Inroduce extension: ")
+filetype = input("Inroduce extension: ")
 
 count = 0
 
