@@ -1,5 +1,8 @@
 import os
 from VALID import ns
+
+dire = input("Seleccione directorio: ")
+os.chdir(dire)
 #print(os.getcwd())
 while True:
 	filetype = input("Inroduce extension: ")
@@ -11,6 +14,6 @@ while True:
 				count = count+1
 	print("")
 	print (count, 'archivos encontrados')
-	conti = ns(input("¿Desea continuar(n/s)?: ")
+	"""conti = ns(input("\nDesea continuar(n/s): ")
 	if conti == ("n"):
-		break
+		   break"""
