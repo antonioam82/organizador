@@ -1,10 +1,16 @@
 import os
 from VALID import ns
 
-dire = input("Seleccione directorio: ")
-os.chdir(dire)
-#print(os.getcwd())
+def change_dir():
+	while True:
+		dire = input("Seleccione un directorio valido: ")
+		if os.path.isdir(dire):
+			os.chdir(dire)
+			break
+
 while True:
+	print(os.getcwd())
+	change_dir()
 	filetype = input("Inroduce extension: ")
 	count = 0
 	for (nombredir, dirs, ficheros) in os.walk('.'):
@@ -14,6 +20,7 @@ while True:
 				count = count+1
 	print("")
 	print (count, 'archivos encontrados')
-	"""conti = ns(input("\nDesea continuar(n/s): ")
-	if conti == ("n"):
-		   break"""
+	
+	conti = ns(input("\n¿Continuar?(n/s): "))
+	if conti == "n":
+		break
