@@ -2,7 +2,7 @@
 import os
 from VALID import ns
 print("Directorio actual: ",os.getcwd())
-dire = os.getcwd()
+#dire = os.getcwd()
 
 def AB():
 	while True:
