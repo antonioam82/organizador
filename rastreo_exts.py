@@ -14,13 +14,13 @@ def AB():
 			
 def change_dir():
 	while True:
-		dire = input("Seleccione un directorio valido: ")
+		dire = input("Introduzca un directorio valido: ")
 		if os.path.isdir(dire):
 			os.chdir(dire)
 			break
 
 while True:
-	print("/nELIJA OPCIÓN")
+	print("\nELIJA OPCIÓN")
 	print("A) BUSCAR ARCHIVOS POR EXTENSIÓN")
 	print("B) BUSCAR UN ARCHIVO")
 	opc = AB()
@@ -35,7 +35,7 @@ while True:
 					print(os.path.abspath(nombrefichero))
 					count = count+1
 					print("")
-					print (count, 'archivos encontrados')
+		print (count, 'archivos encontrados')
 					
 	elif opc == "B":
 		dir_base = input("Introduce directorio base: ")
