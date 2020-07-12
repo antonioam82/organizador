@@ -38,14 +38,18 @@ while True:
 		print (count, 'archivos encontrados')
 					
 	elif opc == "B":
+		finded = False
 		dir_base = input("Introduce directorio base: ")
 		fichero_requerido = input("Inroduce archivo a buscar: ")
 		
 		for root, folders, files in os.walk(dir_base):
 			for file in files:
 				if file == fichero_requerido:
+					finded = True
 					print('Encontrado '+file+' en '+os.path.join(root, file))
 					break
+		if finded == False:
+			print("No se encontró el archivo",fichero_requerido)
 					
 	conti = ns(input("¿Continuar(n/s)?: "))
 	if conti == "n":
