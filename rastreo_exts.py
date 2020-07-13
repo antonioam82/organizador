@@ -22,7 +22,8 @@ while True:
 	print("Directorio actual: ",os.getcwd())
 	print("\n**********ELIJA OPCIÓN**********")
 	print("A) BUSCAR ARCHIVOS POR EXTENSIÓN")
-	print("B) BUSCAR UN ARCHIVO\n")
+	print("B) BUSCAR UN ARCHIVO")
+	print("********************************\n")
 	opc = AB()
 	
 	if opc == 'A':
@@ -41,7 +42,7 @@ while True:
 		finded = False
 		dir_base = input("Introduce directorio base: ")
 		if os.path.isdir(dir_base):
-			fichero_requerido = input("Inroduce archivo a buscar: ")
+			fichero_requerido = raw_input("Inroduce archivo a buscar: ")
 			print("BUSCANDO...")
 			for root, folders, files in os.walk(dir_base):
 				for file in files:
