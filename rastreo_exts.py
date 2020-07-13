@@ -1,7 +1,6 @@
 #-*-coding: utf-8-*-
 import os
 from VALID import ns
-print("Directorio actual: ",os.getcwd())
 
 def AB():
 	while True:
@@ -20,9 +19,10 @@ def change_dir():
 			break
 
 while True:
+	print("Directorio actual: ",os.getcwd())
 	print("\n**********ELIJA OPCIÓN**********")
 	print("A) BUSCAR ARCHIVOS POR EXTENSIÓN")
-	print("B) BUSCAR UN ARCHIVO")
+	print("B) BUSCAR UN ARCHIVO\n")
 	opc = AB()
 	
 	if opc == 'A':
@@ -41,7 +41,7 @@ while True:
 		finded = False
 		dir_base = input("Introduce directorio base: ")
 		if os.path.isdir(dir_base):
-			fichero_requerido = raw_input("Inroduce archivo a buscar: ")
+			fichero_requerido = input("Inroduce archivo a buscar: ")
 			print("BUSCANDO...")
 			for root, folders, files in os.walk(dir_base):
 				for file in files:
