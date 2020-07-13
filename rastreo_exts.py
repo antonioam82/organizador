@@ -30,6 +30,7 @@ while True:
 		change_dir()
 		filetype = input("Inroduce extension: ")
 		count = 0
+		print("BUSCANDO...")
 		for (nombredir, dirs, ficheros) in os.walk('.'):
 			for nombrefichero in ficheros:
 				if nombrefichero.endswith(filetype):
@@ -42,7 +43,7 @@ while True:
 		finded = False
 		dir_base = input("Introduce directorio base: ")
 		if os.path.isdir(dir_base):
-			fichero_requerido = raw_input("Inroduce archivo a buscar: ")
+			fichero_requerido = input("Inroduce archivo a buscar: ")
 			print("BUSCANDO...")
 			for root, folders, files in os.walk(dir_base):
 				for file in files:
