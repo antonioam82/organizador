@@ -2,11 +2,14 @@
 import os
 from VALID import ns
 print("Directorio actual: ",os.getcwd())
-#dire = os.getcwd()
+dire = os.getcwd()
+
+if os.path.isdir(dire):
+	print("YESSS!")
 
 def AB():
 	while True:
-		op = input("Introduje aquí su opción:")
+		op = raw_input("Introduje aquí su opción:")
 		if op == "A" or op == "B":
 			return op
 			break
@@ -15,20 +18,20 @@ def AB():
 			
 def change_dir():
 	while True:
-		dire = input("Introduzca un directorio valido: ")
+		dire = raw_input("Introduzca un directorio valido: ")
 		if os.path.isdir(dire):
 			os.chdir(dire)
 			break
 
 while True:
-	print("\nELIJA OPCIÓN")
+	print("\n**********ELIJA OPCIÓN**********")
 	print("A) BUSCAR ARCHIVOS POR EXTENSIÓN")
 	print("B) BUSCAR UN ARCHIVO")
 	opc = AB()
 	
 	if opc == 'A':
 		change_dir()
-		filetype = input("Inroduce extension: ")
+		filetype = raw_input("Inroduce extension: ")
 		count = 0
 		for (nombredir, dirs, ficheros) in os.walk('.'):
 			for nombrefichero in ficheros:
@@ -40,9 +43,10 @@ while True:
 					
 	elif opc == "B":
 		finded = False
-		dir_base = input("Introduce directorio base: ")
+		dir_base = raw_input("Introduce directorio base: ")
 		if os.path.isdir(dir_base):
-			fichero_requerido = input("Inroduce archivo a buscar: ")
+			fichero_requerido = raw_input("Inroduce archivo a buscar: ")
+			print("BUSCANDO...")
 			for root, folders, files in os.walk(dir_base):
 				for file in files:
 					if file == fichero_requerido:
@@ -54,6 +58,6 @@ while True:
 		else:
 			print("Directorio base no válido.")
 					
-	conti = ns(input("¿Continuar(n/s)?: "))
+	conti = ns(raw_input("¿Continuar(n/s)?: "))
 	if conti == "n":
 		break
