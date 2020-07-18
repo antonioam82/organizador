@@ -13,10 +13,10 @@ def AB():
 			
 def change_dir():
 	while True:
-		dire = input("Introduzca un directorio valido: ")
-		if os.path.isdir(dire):
-			os.chdir(dire)
-			break
+            dire = input("Introduzca un directorio valido: ")
+	    if os.path.isdir(dire):
+	        os.chdir(dire)
+		break
 
 while True:
 	print("Directorio actual: ",os.getcwd())
