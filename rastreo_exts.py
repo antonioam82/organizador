@@ -27,35 +27,35 @@ while True:
 	opc = AB()
 	
 	if opc == 'A':
-		change_dir()
-		filetype = input("Inroduce extension: ")
-		count = 0
-		print("BUSCANDO...")
-		for (nombredir, dirs, ficheros) in os.walk('.'):
-			for nombrefichero in ficheros:
-				if nombrefichero.endswith(filetype):
-					print(os.path.abspath(nombrefichero))
-					count = count+1
-					print("")
-		print (count, 'archivos encontrados')
+	    change_dir()
+	    filetype = input("Inroduce extension: ")
+	    count = 0
+	    print("BUSCANDO...")
+	    for (nombredir, dirs, ficheros) in os.walk('.'):
+	        for nombrefichero in ficheros:
+		    if nombrefichero.endswith(filetype):
+			print(os.path.abspath(nombrefichero))
+			count = count+1
+			print("")
+	    print (count, 'archivos encontrados')
 					
 	elif opc == "B":
-		finded = False
-		dir_base = input("Introduce directorio base: ")
-		if os.path.isdir(dir_base):
-			fichero_requerido = input("Inroduce archivo a buscar: ")
-			print("BUSCANDO...")
-			for root, folders, files in os.walk(dir_base):
-				for file in files:
-					if file == fichero_requerido:
-						finded = True
-						print('Encontrado '+file+' en '+os.path.join(root, file))
-						break
-			if finded == False:
-				print("No se encontró el archivo",fichero_requerido)
+	    finded = False
+	    dir_base = input("Introduce directorio base: ")
+	    if os.path.isdir(dir_base):
+	        fichero_requerido = input("Inroduce archivo a buscar: ")
+		print("BUSCANDO...")
+		for root, folders, files in os.walk(dir_base):
+		    for file in files:
+			if file == fichero_requerido:
+			    finded = True
+		            print('Encontrado '+file+' en '+os.path.join(root, file))
+		            break
+		if finded == False:
+		    print("No se encontró el archivo",fichero_requerido)
 		else:
-			print("Directorio base no válido.")
+		    print("Directorio base no válido.")
 					
 	conti = ns(input("¿Continuar(n/s)?: "))
 	if conti == "n":
-		break
+	    break
