@@ -6,10 +6,10 @@ def AB():
 	while True:
 		op = input("Introduje aquí su opción:")
 		if op == "A" or op == "B":
-			return op
-			break
+		    return op
+		    break
 		else:
-			print("Introduce A o B según su opción.")
+		    print("Introduce A o B según su opción.")
 			
 def change_dir():
 	while True:
