@@ -34,8 +34,8 @@ while True:
 	for (nombredir, dirs, ficheros) in os.walk('.'):
 	    for nombrefichero in ficheros:
 	        if nombrefichero.endswith(filetype):
-		    print(os.path.abspath(nombrefichero))
-		    count = count+1
+		    count+=1
+		    print('{}-'.format(count)+os.path.abspath(nombrefichero))
 		    print("")
 	print (count, 'archivos encontrados')
 					
