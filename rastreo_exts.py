@@ -43,14 +43,14 @@ while True:
 	    finded = False
 	    dir_base = input("Introduce directorio base: ")
 	    if os.path.isdir(dir_base):
-	        fichero_requerido = input("Inroduce archivo a buscar: ")
+	        fichero_requerido = input("Inroduce archivo o término a buscar: ")
 		print("BUSCANDO...\n")
 		for root, folders, files in os.walk(dir_base):
 		    for file in files:
 		        if file == fichero_requerido or fichero_requerido in file:
 			    count+=1
 			    finded = True
-			    print('Encontrado '+file+' en '+os.path.join(root, file))
+			    print('Encontrado '+file+' en '+os.path.join(root, file)+"\n")
 		if finded == False:
 		    print("No se encontró el archivo",fichero_requerido)
 		else:
