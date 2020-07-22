@@ -4,7 +4,7 @@ from VALID import ns
 
 def AB():
 	while True:
-		op = raw_input("Introduje aquí su opción:")
+		op = input("Introduje aquí su opción:")
 		if op == "A" or op == "B":
 			return op
 			break
@@ -13,7 +13,7 @@ def AB():
 			
 def change_dir():
 	while True:
-		dire = raw_input("Introduzca un directorio valido: ")
+		dire = input("Introduzca un directorio valido: ")
 		if os.path.isdir(dire):
 			os.chdir(dire)
 			break
@@ -29,7 +29,7 @@ while True:
 	
 	if opc == 'A':
 		change_dir()
-		filetype = raw_input("Inroduce extension: ")
+		filetype = input("Inroduce extension: ")
 		print("BUSCANDO...")
 		for (nombredir, dirs, ficheros) in os.walk('.'):
 			for nombrefichero in ficheros:
@@ -41,9 +41,9 @@ while True:
 					
 	elif opc == "B":
 		finded = False
-		dir_base = raw_input("Introduce directorio base: ")
+		dir_base = input("Introduce directorio base: ")
 		if os.path.isdir(dir_base):
-			fichero_requerido = raw_input("Inroduce archivo a buscar: ")
+			fichero_requerido = input("Inroduce archivo a buscar: ")
 			print("BUSCANDO...\n")
 			for root, folders, files in os.walk(dir_base):
 				for file in files:
@@ -59,6 +59,6 @@ while True:
 		else:
 			print("Directorio base no válido.")
 					
-	conti = ns(raw_input("¿Continuar(n/s)?: "))
+	conti = ns(input("¿Continuar(n/s)?: "))
 	if conti == "n":
 		break
