@@ -19,25 +19,25 @@ def change_dir():
 	    break
 
 while True:
-	count = 0
-	print("Directorio actual: ",os.getcwd())
-	print("\n**********ELIJA OPCIÓN**********")
-	print("A) BUSCAR ARCHIVOS POR EXTENSIÓN")
-	print("B) BUSCAR UN ARCHIVO")
-	print("********************************\n")
-	opc = AB()
+    count = 0
+    print("Directorio actual: ",os.getcwd())
+    print("\n**********ELIJA OPCIÓN**********")
+    print("A) BUSCAR ARCHIVOS POR EXTENSIÓN")
+    print("B) BUSCAR UN ARCHIVO")
+    print("********************************\n")
+    opc = AB()
 	
-	if opc == 'A':
-		change_dir()
-		filetype = input("Inroduce extension: ")
-		print("BUSCANDO...")
-		for (nombredir, dirs, ficheros) in os.walk('.'):
-			for nombrefichero in ficheros:
-				if nombrefichero.endswith(filetype):
-					print(os.path.abspath(nombrefichero))
-					count = count+1
-					print("")
-		print (count, 'archivos encontrados')
+    if opc == 'A':
+	change_dir()
+	filetype = input("Inroduce extension: ")
+	print("BUSCANDO...")
+	for (nombredir, dirs, ficheros) in os.walk('.'):
+	    for nombrefichero in ficheros:
+	        if nombrefichero.endswith(filetype):
+		    print(os.path.abspath(nombrefichero))
+		    count = count+1
+		    print("")
+	print (count, 'archivos encontrados')
 					
 	elif opc == "B":
 		finded = False
