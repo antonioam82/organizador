@@ -4,7 +4,7 @@ from VALID import ns
 
 def AB():
     while True:
-	op = input("Introduje aquí su opción:")
+	op = input("Introduce aquí su opción:")
 	if op == "A" or op == "B":
 	    return op
 	    break
@@ -37,7 +37,7 @@ while True:
 		    count+=1
 		    print('{}-'.format(count)+os.path.abspath(nombrefichero))
 		    print("")
-	print (count, 'archivos encontrados')
+	print (count, 'ARCHIVOS ENCONTRADOS.')
 					
 	elif opc == "B":
 	    finded = False
@@ -54,7 +54,7 @@ while True:
 		if finded == False:
 		    print("No se encontró el archivo",fichero_requerido)
 		else:
-	            print("\nARCHIVO O TERMINO ENCONTRADO {} VECES".format(count))
+	            print("\nARCHIVO O TERMINO ENCONTRADO {} VECES.".format(count))
 	    else:
 		print("Directorio base no válido.")
 					
