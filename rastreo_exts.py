@@ -47,7 +47,7 @@ while True:
 		print("BUSCANDO...\n")
 		for root, folders, files in os.walk(dir_base):
 		    for file in files:
-		        if file == fichero_requerido or fichero_requerido in file:
+		        if fichero_requerido in file: #file == fichero_requerido
 			    count+=1
 			    finded = True
 			    print('{}-Encontrado '.format(count)+file+' en '+os.path.join(root, file)+"\n")
