@@ -54,7 +54,7 @@ while True:
 		if finded == False:
 		    print("No se encontró el archivo",fichero_requerido)
 		else:
-	            print("\nARCHIVO O TERMINO ENCONTRADO {} VECES.".format(count))
+	            print("\n{}ARCHIVOS ENCONTRADOS.".format(count))
 	    else:
 		print("Directorio base no válido.")
 					
