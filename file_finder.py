@@ -12,13 +12,13 @@ def AB():
 	    print("Introduce A o B según su opción.")
 			
 def change_dir():
-	while True:
-		dire = raw_input("Introduzca un directorio valido: ")
-		if os.path.isdir(dire):
-			os.chdir(dire)
-			break
-		else:
-			print("ERROR, DIRECTORIO NO VÁLIDO")
+    while True:
+	dire = raw_input("Introduzca un directorio valido: ")
+	if os.path.isdir(dire):
+	    os.chdir(dire)
+	    break
+	else:
+	    print("ERROR, DIRECTORIO NO VÁLIDO")
 			
 
 while True:
