@@ -4,12 +4,12 @@ from VALID import ns
 
 def AB():
 	while True:
-		op = raw_input("Introduje aquí su opción:")
-		if op == "A" or op == "B":
-			return op
-			break
-		else:
-			print("Introduce A o B según su opción.")
+	    op = raw_input("Introduje aquí su opción:")
+	    if op == "A" or op == "B":
+		return op
+		break
+	    else:
+		print("Introduce A o B según su opción.")
 			
 def change_dir():
 	while True:
