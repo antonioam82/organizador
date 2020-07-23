@@ -43,7 +43,7 @@ while True:
 	    finded = False
 	    dir_base = input("Introduce directorio base: ")
 	    if os.path.isdir(dir_base):
-	        fichero_requerido = input("Inroduce archivo o término a buscar: ")
+	        fichero_requerido = input("Introduce término de busqueda: ")
 		print("BUSCANDO...\n")
 		for root, folders, files in os.walk(dir_base):
 		    for file in files:
