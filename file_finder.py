@@ -20,7 +20,7 @@ def change_dir():
 	else:
 	    print("ERROR, DIRECTORIO NO VÁLIDO")
 	
-print("\n-----------------FILE FINDER-----------------\n")		
+print("\n-----------------------------FILE FINDER------------------------------\n")		
 
 while True:
     count = 0
