@@ -24,7 +24,7 @@ print("\n-----------------FILE FINDER-----------------\n")
 
 while True:
     count = 0
-    print("Directorio actual: ",os.getcwd())
+    print("Directorio actual: {}: ".format(os.getcwd()))
     print("\n**********ELIJA OPCIÓN**********")
     print("A) BUSCAR ARCHIVOS POR EXTENSIÓN")
     print("B) BUSCAR UN ARCHIVO")
