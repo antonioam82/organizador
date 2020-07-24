@@ -19,7 +19,8 @@ def change_dir():
 	    break
 	else:
 	    print("ERROR, DIRECTORIO NO VÁLIDO")
-			
+	
+print("\n-----------------FILE FINDER-----------------\n")		
 
 while True:
     count = 0
