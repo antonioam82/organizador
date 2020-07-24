@@ -41,7 +41,7 @@ while True:
 			count+=1
 			print('{}-'.format(count)+os.path.abspath(nombrefichero))
 			print("")
-	print ('{} ARCHIVOS ENCONTRADOS.'.format(count))
+	print('{} ARCHIVOS ENCONTRADOS.'.format(count))
 					
     elif opc == "B":
 	finded = False
