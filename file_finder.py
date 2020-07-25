@@ -47,7 +47,7 @@ while True:
 	finded = False
 	change_dir()
 	dir_base = os.getcwd()
-	fichero_requerido = input("Inroduce término de busqueda: ")
+	fichero_requerido = input("Inroduce archivo a buscar o término de busqueda: ")
 	print("BUSCANDO...\n")
 	for root, folders, files in os.walk(dir_base):
 	    for file in files:
