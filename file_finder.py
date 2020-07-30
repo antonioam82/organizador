@@ -34,7 +34,7 @@ while True:
 	
     if opc == 'A':
 	change_dir()
-	filetype = raw_input("Inroduce extension: ")
+	filetype = raw_input("Introduce extension: ")
 	print("BUSCANDO...")
 	for (nombredir, dirs, ficheros) in os.walk('.'):
 	    for nombrefichero in ficheros:
