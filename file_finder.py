@@ -47,16 +47,16 @@ while True:
     elif opc == "B":
         finded = False
         change_dir()
-	#dir_base = os.getcwd()
+        dir_base = os.getcwd()
         fichero_requerido = input("Inroduce archivo a buscar o término de busqueda: ")
         print("BUSCANDO...\n")
-        for root, folders, files in os.walk('.'):
+        for root, folders, files in os.walk(dir_base):
             for file in files:
                 if fichero_requerido in file: #file == fichero_requerido
                     count+=1
                     finded = True
-                    #print('{}-Encontrado '.format(count)+file+' en '+os.path.join(root, file)+"\n")
-                    print('{}-Encontrado '.format(count)+file+' en '+os.path.abspath(file)+"\n")
+                    print('{}-Encontrado '.format(count)+file+' en '+os.path.join(root,file)+"\n")
+            
         if finded == False:
             print("No se encontró el archivo",fichero_requerido)
         else:
