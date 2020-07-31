@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import os
 from VALID import ns
@@ -35,7 +36,7 @@ while True:
         change_dir()
         filetype = input("Introduce extension: ")
         print("BUSCANDO...")
-        for (nombredir, dirs, ficheros) in os.walk('.'):
+        for nombredir, dirs, ficheros in os.walk('.'):
             for nombrefichero in ficheros:
                 if nombrefichero.endswith(filetype):
                     count+=1
@@ -54,7 +55,8 @@ while True:
                 if fichero_requerido in file: #file == fichero_requerido
                     count+=1
                     finded = True
-                    print('{}-Encontrado '.format(count)+file+' en '+os.path.join(root, file)+"\n")
+                    #print('{}-Encontrado '.format(count)+file+' en '+os.path.join(root, file)+"\n")
+                    print('{}-Encontrado '.format(count)+file+' en '+os.path.abspath(file)+"\n")
         if finded == False:
             print("No se encontró el archivo",fichero_requerido)
         else:
