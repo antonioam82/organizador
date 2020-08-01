@@ -40,7 +40,8 @@ while True:
             for nombrefichero in ficheros:
                 if nombrefichero.endswith(filetype):
                     count+=1
-                    print('{}-'.format(count)+os.path.abspath(nombrefichero))
+                    #print('{}-'.format(count)+os.path.abspath(nombrefichero))
+		    print('{}-'.format(count)+os.path.join(nombredir,nombrefichero))
                     
         print('\n{} ARCHIVOS ENCONTRADOS.'.format(count))
 					
