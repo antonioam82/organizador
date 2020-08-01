@@ -36,7 +36,7 @@ while True:
         change_dir()
         filetype = input("Introduce extension: ")
         mostrar = ns(input("¿Mostrar ubicación de los archivos?(n/s): "))
-        print("BUSCANDO...")
+        print("BUSCANDO...\n")
         for nombredir, dirs, ficheros in os.walk('.'):
             for nombrefichero in ficheros:
                 if nombrefichero.endswith(filetype):
