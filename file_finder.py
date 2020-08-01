@@ -35,13 +35,16 @@ while True:
     if opc == 'A':
         change_dir()
         filetype = input("Introduce extension: ")
+        mostrar = ns(input("¿Mostrar ubicación de los archivos?(n/s): "))
         print("BUSCANDO...")
         for nombredir, dirs, ficheros in os.walk('.'):
             for nombrefichero in ficheros:
                 if nombrefichero.endswith(filetype):
                     count+=1
-                    #print('{}-'.format(count)+os.path.abspath(nombrefichero))
-		    print('{}-'.format(count)+os.path.join(nombredir,nombrefichero))
+                    if mostrar == "s":
+                        print('{}-'.format(count)+os.path.join(nombredir,nombrefichero))
+                    else:
+                        print('{}-'.format(count)+os.path.abspath(nombrefichero))
                     
         print('\n{} ARCHIVOS ENCONTRADOS.'.format(count))
 					
