@@ -37,7 +37,7 @@ while True:
         filetype = input("Introduce extension: ")
         mostrar = ns(input("¿Mostrar ubicación de los archivos?(n/s): "))
         print("BUSCANDO...\n")
-        for nombredir, dirs, ficheros in os.walk('.'):
+        for nombredir, dirs, ficheros in os.walk(os.getcwd()):
             for nombrefichero in ficheros:
                 if nombrefichero.endswith(filetype):
                     count+=1
@@ -60,6 +60,7 @@ while True:
                     count+=1
                     finded = True
                     print('{}-Encontrado '.format(count)+file+' en '+os.path.join(root,file)+"\n")
+                    #print('{}-Encontrado '.format(count)+'archivo'+' en '+os.path.join(root,file)+"\n")
             
         if finded == False:
             print("No se encontró el archivo",fichero_requerido)
