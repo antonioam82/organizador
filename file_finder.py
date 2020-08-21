@@ -59,7 +59,8 @@ while True:
                 if fichero_requerido in file: #file == fichero_requerido
                     count+=1
                     finded = True
-                    print('{}-Encontrado '.format(count)+file+' en '+os.path.join(root,file)+"\n")
+                    #print('{}-Encontrado '.format(count)+file+' en '+os.path.join(root,file)+"\n")
+                    print('{}-Encontrado '.format(count)+file+' en '+os.path.join(root)+"\n")
                     #print('{}-Encontrado '.format(count)+'archivo'+' en '+os.path.join(root,file)+"\n")
             
         if finded == False:
